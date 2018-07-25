@@ -91,13 +91,36 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-Pn-CpY">
+                                <rect key="frame" x="335" y="152.5" width="25" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3V-cC-D8r">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <state key="normal" image="uncheckedBox"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awG-XN-j5h">
+                                        <rect key="frame" x="0.0" y="33" width="25" height="25"/>
+                                        <state key="normal" image="uncheckedBox"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpG-zN-eZg">
+                                        <rect key="frame" x="0.0" y="66" width="25" height="25"/>
+                                        <state key="normal" image="uncheckedBox"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXn-n5-ze0">
+                                        <rect key="frame" x="0.0" y="99" width="25" height="25"/>
+                                        <state key="normal" image="uncheckedBox"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Ebf-UL-RjB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Ert-1D-Q0G"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="top" secondItem="G3N-i2-Jcp" secondAttribute="bottom" constant="15" id="Ko9-24-tx3"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="NCb-mB-9JP"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="xxb-Pn-CpY" secondAttribute="trailing" constant="15" id="Nqn-Gp-9A2"/>
                             <constraint firstItem="iRl-PP-CBE" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="15" id="P9Z-LJ-jh0"/>
-                            <constraint firstItem="Ebf-UL-RjB" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Vns-Ny-gby"/>
+                            <constraint firstItem="xxb-Pn-CpY" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="85" id="hDq-aw-7ma"/>
                             <constraint firstItem="G3N-i2-Jcp" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="10" id="jFd-r1-zBx"/>
                             <constraint firstItem="G3N-i2-Jcp" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="tTj-dB-WLp"/>
                             <constraint firstItem="iRl-PP-CBE" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="xcc-rS-IfP"/>
@@ -122,13 +145,32 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Yl-cw-bd7">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Route:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sI-WC-2l3">
+                                <rect key="frame" x="15" y="35" width="121" height="26"/>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.2470588235" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xYD-JS-dJx">
+                                <rect key="frame" x="151" y="35" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="lIQ-GV-J50"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="xYD-JS-dJx" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="0vR-Be-XuE"/>
                             <constraint firstItem="8Yl-cw-bd7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="1dk-Wd-9WR"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="8Yl-cw-bd7" secondAttribute="trailing" id="7ae-jM-dVT"/>
+                            <constraint firstItem="6sI-WC-2l3" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="15" id="Jdh-Ux-OeL"/>
                             <constraint firstItem="8Yl-cw-bd7" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="hHY-fq-PUY"/>
+                            <constraint firstItem="6sI-WC-2l3" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="pqc-NC-xEQ"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="8Yl-cw-bd7" secondAttribute="bottom" id="vsW-NV-8mW"/>
+                            <constraint firstItem="xYD-JS-dJx" firstAttribute="leading" secondItem="6sI-WC-2l3" secondAttribute="trailing" constant="15" id="zCe-6P-nhQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -160,5 +202,6 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="uncheckedBox" width="25" height="25"/>
     </resources>
 </document>
