@@ -14,6 +14,8 @@
 		809673FD21081F0A00F71B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809673FC21081F0A00F71B58 /* Assets.xcassets */; };
 		8096740021081F0A00F71B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809673FE21081F0A00F71B58 /* LaunchScreen.storyboard */; };
 		8096740B21081F0B00F71B58 /* Texas_RunningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096740A21081F0B00F71B58 /* Texas_RunningTests.swift */; };
+		80967416210821C800F71B58 /* IBMPlexSans-Text.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80967415210821C700F71B58 /* IBMPlexSans-Text.ttf */; };
+		80967418210821D700F71B58 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80967417210821D600F71B58 /* IBMPlexSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		8096740621081F0B00F71B58 /* Texas RunningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Texas RunningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8096740A21081F0B00F71B58 /* Texas_RunningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texas_RunningTests.swift; sourceTree = "<group>"; };
 		8096740C21081F0B00F71B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80967415210821C700F71B58 /* IBMPlexSans-Text.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Text.ttf"; sourceTree = "<group>"; };
+		80967417210821D600F71B58 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		809673F221081EFE00F71B58 /* Texas Running */ = {
 			isa = PBXGroup;
 			children = (
+				80967417210821D600F71B58 /* IBMPlexSans-Bold.ttf */,
+				80967415210821C700F71B58 /* IBMPlexSans-Text.ttf */,
 				809673F321081EFE00F71B58 /* AppDelegate.swift */,
 				809673F521081EFE00F71B58 /* FirstViewController.swift */,
 				809673F721081EFE00F71B58 /* SecondViewController.swift */,
@@ -180,6 +186,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80967416210821C800F71B58 /* IBMPlexSans-Text.ttf in Resources */,
+				80967418210821D700F71B58 /* IBMPlexSans-Bold.ttf in Resources */,
 				8096740021081F0A00F71B58 /* LaunchScreen.storyboard in Resources */,
 				809673FD21081F0A00F71B58 /* Assets.xcassets in Resources */,
 				809673FB21081EFE00F71B58 /* Main.storyboard in Resources */,
