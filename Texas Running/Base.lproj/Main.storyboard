@@ -54,14 +54,14 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-Iy-K42">
-                                        <rect key="frame" x="0.0" y="34" width="52" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-Iy-K42">
+                                        <rect key="frame" x="0.0" y="34" width="53.5" height="26"/>
                                         <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-B1-5XI">
-                                        <rect key="frame" x="0.0" y="68" width="53.5" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-B1-5XI">
+                                        <rect key="frame" x="0.0" y="68" width="52" height="26"/>
                                         <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -115,7 +115,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ebf-UL-RjB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Ert-1D-Q0G"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="top" secondItem="G3N-i2-Jcp" secondAttribute="bottom" constant="15" id="Ko9-24-tx3"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="NCb-mB-9JP"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="xxb-Pn-CpY" secondAttribute="trailing" constant="15" id="Nqn-Gp-9A2"/>
@@ -160,13 +159,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REC-dP-wmv">
+                                <rect key="frame" x="271" y="38" width="25" height="25"/>
+                                <state key="normal" image="dropdownArrow"/>
+                                <connections>
+                                    <action selector="showRegions:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Naa-8M-5nu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="REC-dP-wmv" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="18" id="0Sx-ot-JyT"/>
                             <constraint firstItem="xYD-JS-dJx" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="0vR-Be-XuE"/>
                             <constraint firstItem="8Yl-cw-bd7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="1dk-Wd-9WR"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="8Yl-cw-bd7" secondAttribute="trailing" id="7ae-jM-dVT"/>
                             <constraint firstItem="6sI-WC-2l3" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="15" id="Jdh-Ux-OeL"/>
+                            <constraint firstItem="REC-dP-wmv" firstAttribute="leading" secondItem="6sI-WC-2l3" secondAttribute="trailing" constant="135" id="Ugk-U2-E6i"/>
                             <constraint firstItem="8Yl-cw-bd7" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="hHY-fq-PUY"/>
                             <constraint firstItem="6sI-WC-2l3" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="pqc-NC-xEQ"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="8Yl-cw-bd7" secondAttribute="bottom" id="vsW-NV-8mW"/>
@@ -175,6 +183,10 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="map" destination="8Yl-cw-bd7" id="YQc-Vt-o2t"/>
+                        <outlet property="regionsField" destination="xYD-JS-dJx" id="uoL-O9-hyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,6 +212,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dropdownArrow" width="25" height="25"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
         <image name="uncheckedBox" width="25" height="25"/>
