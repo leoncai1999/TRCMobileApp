@@ -54,6 +54,34 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
         let region = MKCoordinateRegion(center: coordsSelected, span: span)
         map.setRegion(region, animated: true)
     }
+    
+    //MARK: - Data for Regions Picker
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return regions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let keys = Array(regions.keys)
+        return keys[row]
+    }
+    
+    // Zooms the map into a new region when you select a new route
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let key = Array(regions.keys)[row]
+        regionsField.text = key
+        selectedRegion = key
+        let sourceCoordinates = CLLocationCoordinate2DMake(regions[key]![0], regions[key]![1])
+        let span = MKCoordinateSpanMake(regions[key]![2], regions[key]![2])
+        let region = MKCoordinateRegion(center: sourceCoordinates, span: span)
+        map.setRegion(region, animated: true)
+        self.view.endEditing(false)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
