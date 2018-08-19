@@ -139,6 +139,84 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="j5C-wH-6EL">
+            <objects>
+                <viewController id="12M-vA-X1Z" customClass="NewsFeedViewController" customModule="Texas_Running" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ui5-Jt-yvp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6We-KW-QKC">
+                                <rect key="frame" x="15" y="35" width="345" height="33"/>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5VD-Pe-7fX">
+                                <rect key="frame" x="0.0" y="83" width="375" height="535"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="facebookPost" rowHeight="98" id="CFI-Ql-MPT" customClass="facebookPost" customModule="Texas_Running" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CFI-Ql-MPT" id="OIp-j7-Jjw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b11-Li-Eag">
+                                                    <rect key="frame" x="15" y="5" width="345" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kL-6d-lu9">
+                                                    <rect key="frame" x="15" y="38" width="345" height="43"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7kL-6d-lu9" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="9FE-lw-uuD"/>
+                                                <constraint firstAttribute="trailing" secondItem="7kL-6d-lu9" secondAttribute="trailing" constant="15" id="9s4-JY-bVQ"/>
+                                                <constraint firstItem="b11-Li-Eag" firstAttribute="top" secondItem="OIp-j7-Jjw" secondAttribute="top" constant="5" id="DrF-BL-6HN"/>
+                                                <constraint firstAttribute="trailing" secondItem="b11-Li-Eag" secondAttribute="trailing" constant="15" id="FQw-3s-hQ1"/>
+                                                <constraint firstAttribute="bottom" secondItem="7kL-6d-lu9" secondAttribute="bottom" constant="5" id="T95-LB-cJD"/>
+                                                <constraint firstItem="b11-Li-Eag" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="TQr-ZW-1Bk"/>
+                                                <constraint firstItem="7kL-6d-lu9" firstAttribute="top" secondItem="b11-Li-Eag" secondAttribute="bottom" constant="10" id="oQS-T2-t4J"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postDescription" destination="7kL-6d-lu9" id="LVw-Fj-1UP"/>
+                                            <outlet property="postTime" destination="b11-Li-Eag" id="OpR-U6-4Tz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LEE-Od-Z1V" firstAttribute="bottom" secondItem="5VD-Pe-7fX" secondAttribute="bottom" id="6FM-9g-NJA"/>
+                            <constraint firstItem="6We-KW-QKC" firstAttribute="top" secondItem="LEE-Od-Z1V" secondAttribute="top" constant="15" id="Pdh-0m-UP2"/>
+                            <constraint firstItem="LEE-Od-Z1V" firstAttribute="trailing" secondItem="6We-KW-QKC" secondAttribute="trailing" constant="15" id="f6Z-BW-Hqk"/>
+                            <constraint firstItem="LEE-Od-Z1V" firstAttribute="trailing" secondItem="5VD-Pe-7fX" secondAttribute="trailing" id="jSu-iv-tNQ"/>
+                            <constraint firstItem="5VD-Pe-7fX" firstAttribute="top" secondItem="6We-KW-QKC" secondAttribute="bottom" constant="15" id="sMj-sc-bTa"/>
+                            <constraint firstItem="5VD-Pe-7fX" firstAttribute="leading" secondItem="LEE-Od-Z1V" secondAttribute="leading" id="tVY-8b-6kL"/>
+                            <constraint firstItem="6We-KW-QKC" firstAttribute="leading" secondItem="LEE-Od-Z1V" secondAttribute="leading" constant="15" id="xvZ-xI-oEN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LEE-Od-Z1V"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="roG-xD-OIg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="5VD-Pe-7fX" id="oHt-Ip-4oK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2u-wg-IYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="700.29985007496259"/>
+        </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -210,6 +288,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="12M-vA-X1Z" kind="relationship" relationship="viewControllers" id="hht-zy-9tP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

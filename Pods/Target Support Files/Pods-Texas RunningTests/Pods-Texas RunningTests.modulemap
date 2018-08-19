@@ -1,0 +1,6 @@
+framework module Pods_Texas_RunningTests {
+  umbrella header "Pods-Texas RunningTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
