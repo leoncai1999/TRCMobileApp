@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate {
+class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     //MARK: Properties
     @IBOutlet weak var map: MKMapView!
@@ -41,8 +41,11 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
                    "North": northCoords,
                    "West": westCoords,
                    "Shoal Creek": shoalCreekCoords]
+        
         regionsPicker.delegate = self
+        regionsPicker.dataSource = self
         regionsField.inputView = regionsPicker
+        regionsField.text = selectedRegion
         
         initializeMap()
     }
