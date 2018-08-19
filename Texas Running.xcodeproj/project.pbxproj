@@ -16,6 +16,7 @@
 		8096740B21081F0B00F71B58 /* Texas_RunningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096740A21081F0B00F71B58 /* Texas_RunningTests.swift */; };
 		80967416210821C800F71B58 /* IBMPlexSans-Text.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80967415210821C700F71B58 /* IBMPlexSans-Text.ttf */; };
 		80967418210821D700F71B58 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80967417210821D600F71B58 /* IBMPlexSans-Bold.ttf */; };
+		80E681F02129D8A8008725D4 /* checkBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E681EF2129D8A8008725D4 /* checkBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8096740C21081F0B00F71B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80967415210821C700F71B58 /* IBMPlexSans-Text.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Text.ttf"; sourceTree = "<group>"; };
 		80967417210821D600F71B58 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
+		80E681EF2129D8A8008725D4 /* checkBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				809673F521081EFE00F71B58 /* FirstViewController.swift */,
 				809673F721081EFE00F71B58 /* SecondViewController.swift */,
 				809673F921081EFE00F71B58 /* Main.storyboard */,
+				80E681EF2129D8A8008725D4 /* checkBox.swift */,
 				809673FC21081F0A00F71B58 /* Assets.xcassets */,
 				809673FE21081F0A00F71B58 /* LaunchScreen.storyboard */,
 				8096740121081F0A00F71B58 /* Info.plist */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80E681F02129D8A8008725D4 /* checkBox.swift in Sources */,
 				809673F821081EFE00F71B58 /* SecondViewController.swift in Sources */,
 				809673F421081EFE00F71B58 /* AppDelegate.swift in Sources */,
 				809673F621081EFE00F71B58 /* FirstViewController.swift in Sources */,

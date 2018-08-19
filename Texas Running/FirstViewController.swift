@@ -9,12 +9,42 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    // MARK: Properties
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var timeText: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // rounds the edges of the button
+        submitButton.layer.cornerRadius = 5
+        submitButton.clipsToBounds = true
+        adjustTimeText()
     }
 
+    func adjustTimeText() {
+        let hour = Calendar.current.component(.hour, from: Date())
+        let dayOfWeek = getDayOfWeek()
+        if (dayOfWeek == 6 || dayOfWeek == 7 || (dayOfWeek == 5 && hour > 18)) {
+            timeText.text = "Poll Closes Monday at 6:00 PM"
+        } else if (hour > 18 || dayOfWeek == 1) {
+            timeText.text = "Poll Closes Tomorrow at 6:00 PM"
+        } else {
+            timeText.text = "Poll Closes Today at 6:00 PM"
+        }
+    }
+    
+    // 1 indicates Sunday, 2 indicates Monday and so forth
+    func getDayOfWeek() -> Int {
+        let today = Date()
+        let gregorian = Calendar(identifier: .gregorian)
+        let dateComponents = gregorian.dateComponents([.weekday], from: today)
+        return dateComponents.weekday!
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

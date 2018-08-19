@@ -45,13 +45,13 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
         regionsPicker.delegate = self
         regionsPicker.dataSource = self
         regionsField.inputView = regionsPicker
-        regionsField.text = selectedRegion
         
         initializeMap()
     }
     
     // Map zooms into South Route by default
     func initializeMap() {
+        regionsField.text = selectedRegion
         let coordsSelected = CLLocationCoordinate2DMake(southCoords[0], southCoords[1])
         let span = MKCoordinateSpanMake(0.04, 0.04)
         let region = MKCoordinateRegion(center: coordsSelected, span: span)
