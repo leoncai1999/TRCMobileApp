@@ -112,9 +112,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1K-eK-fJs">
+                                <rect key="frame" x="310" y="553" width="50" height="50"/>
+                                <state key="normal" image="infoIcon"/>
+                                <connections>
+                                    <segue destination="Sxk-cP-wfH" kind="show" id="SQZ-d4-mzP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="K1K-eK-fJs" secondAttribute="trailing" constant="15" id="De3-Zy-XUE"/>
                             <constraint firstItem="Ebf-UL-RjB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="KIy-Jb-4NL"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="top" secondItem="G3N-i2-Jcp" secondAttribute="bottom" constant="15" id="Ko9-24-tx3"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="NCb-mB-9JP"/>
@@ -125,6 +133,7 @@
                             <constraint firstItem="G3N-i2-Jcp" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="tTj-dB-WLp"/>
                             <constraint firstItem="iRl-PP-CBE" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="xcc-rS-IfP"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="iRl-PP-CBE" secondAttribute="trailing" constant="15" id="xuA-FS-NU7"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="K1K-eK-fJs" secondAttribute="bottom" constant="15" id="yeh-Tx-TTA"/>
                             <constraint firstItem="Ebf-UL-RjB" firstAttribute="top" secondItem="G3N-i2-Jcp" secondAttribute="bottom" constant="210" id="yjY-rv-cpB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -138,6 +147,134 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="RxL-A3-9Tm">
+            <objects>
+                <viewController id="Sxk-cP-wfH" customClass="ScheduleViewController" customModule="Texas_Running" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PJ4-uQ-cIq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-0B-AyG">
+                                <rect key="frame" x="15" y="35" width="345" height="32.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-Sm-6uK">
+                                <rect key="frame" x="15" y="77.5" width="345" height="110.5"/>
+                                <string key="text">The Texas Running Club meets Monday through Thursday outside of Gregory Gym. During Daylight Savings Time, evening runs will start at 6pm. In the winter (non-DST), evening runs will start at 5:15pm.</string>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="PxB-Jm-eE9">
+                                <rect key="frame" x="15" y="198.5" width="345" height="299.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blt-fF-hdQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:30 PM - Core Workout (at Clark Field)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-Co-REe">
+                                        <rect key="frame" x="0.0" y="25.5" width="301" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:00 PM - Evening Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5e-H8-cWt">
+                                        <rect key="frame" x="0.0" y="51" width="174" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pe6-ol-ovT">
+                                        <rect key="frame" x="0.0" y="76.5" width="66.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:00 PM - Evening Run &amp; Track Workout (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxp-fO-RCt">
+                                        <rect key="frame" x="0.0" y="102" width="309.5" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-Zv-8dj">
+                                        <rect key="frame" x="0.0" y="149.5" width="93.5" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:00 PM - Evening Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3o-rD-rV5">
+                                        <rect key="frame" x="0.0" y="175" width="174" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-VC-a4d">
+                                        <rect key="frame" x="0.0" y="200.5" width="75" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:00 PM - Evening Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oa-RE-ffX">
+                                        <rect key="frame" x="0.0" y="226" width="174" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUY-ek-cpl">
+                                        <rect key="frame" x="0.0" y="251.5" width="73" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00 AM - Long Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvS-Hw-KVf">
+                                        <rect key="frame" x="0.0" y="277" width="151" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxy-Bi-Q7T">
+                                <rect key="frame" x="335" y="37.5" width="25" height="25"/>
+                                <state key="normal" image="xIcon"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="Sxk-cP-wfH" eventType="touchUpInside" id="aXl-Cw-ffY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dBg-Sm-6uK" firstAttribute="leading" secondItem="tSw-QH-hUh" secondAttribute="leading" constant="15" id="4z5-n9-qpb"/>
+                            <constraint firstItem="PxB-Jm-eE9" firstAttribute="top" secondItem="dBg-Sm-6uK" secondAttribute="bottom" constant="10" id="Jkj-68-ohe"/>
+                            <constraint firstItem="tSw-QH-hUh" firstAttribute="trailing" secondItem="mIC-0B-AyG" secondAttribute="trailing" constant="15" id="TVl-dd-jh3"/>
+                            <constraint firstItem="tSw-QH-hUh" firstAttribute="trailing" secondItem="dBg-Sm-6uK" secondAttribute="trailing" constant="15" id="VFZ-wy-EkV"/>
+                            <constraint firstItem="tSw-QH-hUh" firstAttribute="trailing" secondItem="PxB-Jm-eE9" secondAttribute="trailing" constant="15" id="Xz5-Uo-hGy"/>
+                            <constraint firstItem="Pxy-Bi-Q7T" firstAttribute="top" secondItem="tSw-QH-hUh" secondAttribute="top" constant="17.5" id="YBL-q8-SkM"/>
+                            <constraint firstItem="tSw-QH-hUh" firstAttribute="trailing" secondItem="Pxy-Bi-Q7T" secondAttribute="trailing" constant="15" id="ZIQ-pI-czD"/>
+                            <constraint firstItem="dBg-Sm-6uK" firstAttribute="top" secondItem="mIC-0B-AyG" secondAttribute="bottom" constant="10" id="hqc-mD-gKO"/>
+                            <constraint firstItem="mIC-0B-AyG" firstAttribute="leading" secondItem="tSw-QH-hUh" secondAttribute="leading" constant="15" id="ooV-aT-4Kg"/>
+                            <constraint firstItem="PxB-Jm-eE9" firstAttribute="leading" secondItem="tSw-QH-hUh" secondAttribute="leading" constant="15" id="tOL-uG-0jF"/>
+                            <constraint firstItem="mIC-0B-AyG" firstAttribute="top" secondItem="tSw-QH-hUh" secondAttribute="top" constant="15" id="uDV-sD-OwJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tSw-QH-hUh"/>
+                    </view>
+                    <connections>
+                        <outlet property="coreText" destination="NG1-Co-REe" id="SkZ-st-Ido"/>
+                        <outlet property="runText0" destination="mxp-fO-RCt" id="5TO-6q-vaV"/>
+                        <outlet property="runText1" destination="R5e-H8-cWt" id="esj-hK-PZ0"/>
+                        <outlet property="runText2" destination="K3o-rD-rV5" id="cgv-9x-nbn"/>
+                        <outlet property="runText3" destination="3oa-RE-ffX" id="Bwg-ex-fJS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZM-N8-ZCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="-321"/>
         </scene>
         <!--Item-->
         <scene sceneID="j5C-wH-6EL">
@@ -299,7 +436,9 @@
     <resources>
         <image name="dropdownArrow" width="25" height="25"/>
         <image name="first" width="30" height="30"/>
+        <image name="infoIcon" width="50" height="50"/>
         <image name="second" width="30" height="30"/>
         <image name="uncheckedBox" width="25" height="25"/>
+        <image name="xIcon" width="25" height="25"/>
     </resources>
 </document>
