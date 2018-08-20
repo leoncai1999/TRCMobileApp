@@ -23,6 +23,10 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
     
     let gregGymCoords = [30.284033, -97.736999]
     
+    // coordinates to plot out the routes
+    let southLats = [30.284033, 30.280716, 30.276424, 30.274474, 30.272723, 30.259739, 30.260671, 30.261385, 30.262734, 30.263981, 30.263817, 30.264576, 30.266136, 30.265545, 30.264688, 30.264215, 30.264591, 30.263679, 30.262846]
+    let southLongs = [-97.736999, -97.738102, -97.739654, -97.739253, -97.741045, -97.745705, -97.745343, -97.747755, -97.749660, -97.753002, -97.754880, -97.756371, -97.755268, -97.752593, -97.751614, -97.750262, -97.750047, -97.746971, -97.744799]
+    
     // Picker that gives regions for the map to zoom into
     @IBOutlet weak var regionsField: UITextField!
     var regionsPicker = UIPickerView()
@@ -48,7 +52,9 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
         regionsPicker.dataSource = self
         regionsField.inputView = regionsPicker
         
+        map.delegate = self
         initializeMap()
+        
     }
     
     // Map zooms into South Route by default
@@ -71,12 +77,23 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
     
     func plotRoute(region: String) {
         if (region == "South") {
-            plotPoint(lat: 30.280716, long: -97.738102)
-            plotPoint(lat: 30.276424, long: -97.739654)
-            plotPoint(lat: 30.274474, long: -97.739253)
-            plotPoint(lat: 30.272723, long: -97.741045)
-            plotPoint(lat: 30.259739, long: -97.745705)
+            var coords: [CLLocationCoordinate2D] = []
+            // appends all the points for the line to go through
+            for index in 0...southLats.count-1 {
+                let point = CLLocationCoordinate2D(latitude: southLats[index], longitude: southLongs[index])
+                coords.append(point)
+            }
+            
+            let polyline = MKPolyline(coordinates: &coords, count: coords.count)
+            map.add(polyline)
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        renderer.strokeColor = UIColor.red
+        renderer.lineWidth = 3
+        return renderer
     }
     
     // plots an individual point
@@ -86,6 +103,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
         annotation.coordinate = location
         map.addAnnotation(annotation)
     }
+    
     
     //MARK: - Data for Regions Picker
     
