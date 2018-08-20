@@ -14,7 +14,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var timeText: UILabel!
     
-
+    var closeTime = "6:00 PM"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,6 +23,13 @@ class FirstViewController: UIViewController {
         // rounds the edges of the button
         submitButton.layer.cornerRadius = 5
         submitButton.clipsToBounds = true
+        
+        // check for daylight savings
+        let date = Date()
+        let timeZone = TimeZone.current
+        if !timeZone.isDaylightSavingTime(for: date) {
+            closeTime = "5:15 PM"
+        }
         adjustTimeText()
     }
     
@@ -52,11 +60,11 @@ class FirstViewController: UIViewController {
         let hour = Calendar.current.component(.hour, from: Date())
         let dayOfWeek = getDayOfWeek()
         if (dayOfWeek == 6 || dayOfWeek == 7 || (dayOfWeek == 5 && hour > 18)) {
-            timeText.text = "Poll Closes Monday at 6:00 PM"
+            timeText.text = "Poll Closes Monday at " + closeTime
         } else if (hour > 18 || dayOfWeek == 1) {
-            timeText.text = "Poll Closes Tomorrow at 6:00 PM"
+            timeText.text = "Poll Closes Tomorrow at " + closeTime
         } else {
-            timeText.text = "Poll Closes Today at 6:00 PM"
+            timeText.text = "Poll Closes Today at " + closeTime
         }
     }
     

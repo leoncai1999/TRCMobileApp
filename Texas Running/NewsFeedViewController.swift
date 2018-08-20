@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class facebookPost: UITableViewCell {
     
@@ -33,6 +35,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
+        
         
     }
 

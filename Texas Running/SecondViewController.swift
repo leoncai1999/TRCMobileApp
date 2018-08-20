@@ -21,6 +21,8 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
     let westCoords = [30.278906, -97.758396, 0.04]
     let shoalCreekCoords = [30.303036, -97.742863, 0.04]
     
+    let gregGymCoords = [30.284033, -97.736999]
+    
     // Picker that gives regions for the map to zoom into
     @IBOutlet weak var regionsField: UITextField!
     var regionsPicker = UIPickerView()
@@ -56,6 +58,33 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
         let span = MKCoordinateSpanMake(0.04, 0.04)
         let region = MKCoordinateRegion(center: coordsSelected, span: span)
         map.setRegion(region, animated: true)
+        
+        // plot point at Greg Gym where all routes start
+        let annotation = MKPointAnnotation()
+        let location = CLLocationCoordinate2DMake(Double(gregGymCoords[0]), Double(gregGymCoords[1]))
+        annotation.coordinate = location
+        annotation.title = "Gregory Gym"
+        annotation.subtitle = "Starting point for all routes"
+        map.addAnnotation(annotation)
+        plotRoute(region: selectedRegion)
+    }
+    
+    func plotRoute(region: String) {
+        if (region == "South") {
+            plotPoint(lat: 30.280716, long: -97.738102)
+            plotPoint(lat: 30.276424, long: -97.739654)
+            plotPoint(lat: 30.274474, long: -97.739253)
+            plotPoint(lat: 30.272723, long: -97.741045)
+            plotPoint(lat: 30.259739, long: -97.745705)
+        }
+    }
+    
+    // plots an individual point
+    func plotPoint(lat: Double, long: Double) {
+        let annotation = MKPointAnnotation()
+        let location = CLLocationCoordinate2DMake(lat, long)
+        annotation.coordinate = location
+        map.addAnnotation(annotation)
     }
     
     //MARK: - Data for Regions Picker
@@ -82,6 +111,8 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UIPickerViewDel
         let span = MKCoordinateSpanMake(regions[key]![2], regions[key]![2])
         let region = MKCoordinateRegion(center: sourceCoordinates, span: span)
         map.setRegion(region, animated: true)
+        // plots the selected route
+        plotRoute(region: selectedRegion)
         self.view.endEditing(false)
     }
     
