@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote on Today's Route" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRl-PP-CBE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote on a route" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRl-PP-CBE">
                                 <rect key="frame" x="15" y="35" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,27 +113,70 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1K-eK-fJs">
-                                <rect key="frame" x="310" y="553" width="50" height="50"/>
+                                <rect key="frame" x="325" y="35" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="NOI-pp-bvF"/>
+                                    <constraint firstAttribute="width" constant="35" id="aUI-KS-kIb"/>
+                                </constraints>
                                 <state key="normal" image="infoIcon"/>
                                 <connections>
                                     <segue destination="Sxk-cP-wfH" kind="show" id="SQZ-d4-mzP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO2-F4-Bwh">
+                                <rect key="frame" x="15" y="573" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4R1-EK-5O9"/>
+                                    <constraint firstAttribute="width" constant="30" id="iEB-dY-nHO"/>
+                                </constraints>
+                                <state key="normal" image="facebookIcon"/>
+                                <connections>
+                                    <action selector="facebookRedirect:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ObS-OS-l8C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpl-Mb-4eX">
+                                <rect key="frame" x="65" y="573" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="L4t-mz-7eR"/>
+                                    <constraint firstAttribute="width" constant="30" id="XTP-mJ-xi0"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="instagramIcon"/>
+                                <connections>
+                                    <action selector="instagramRedirect:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fU3-fr-KIY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCP-p6-giO">
+                                <rect key="frame" x="115" y="573" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="k2p-IE-Jhp"/>
+                                    <constraint firstAttribute="width" constant="30" id="uzB-k8-Fvi"/>
+                                </constraints>
+                                <state key="normal" image="twitterIcon"/>
+                                <connections>
+                                    <action selector="twitterRedirect:" destination="9pv-A4-QxB" eventType="touchUpInside" id="24a-XC-EUd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="K1K-eK-fJs" secondAttribute="trailing" constant="15" id="De3-Zy-XUE"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="pCP-p6-giO" secondAttribute="bottom" constant="15" id="5rW-t0-4td"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="vpl-Mb-4eX" secondAttribute="bottom" constant="15" id="Id8-uM-l3F"/>
                             <constraint firstItem="Ebf-UL-RjB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="KIy-Jb-4NL"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="top" secondItem="G3N-i2-Jcp" secondAttribute="bottom" constant="15" id="Ko9-24-tx3"/>
                             <constraint firstItem="sLx-9S-ypQ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="NCb-mB-9JP"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="xxb-Pn-CpY" secondAttribute="trailing" constant="15" id="Nqn-Gp-9A2"/>
                             <constraint firstItem="iRl-PP-CBE" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="15" id="P9Z-LJ-jh0"/>
+                            <constraint firstItem="pCP-p6-giO" firstAttribute="leading" secondItem="vpl-Mb-4eX" secondAttribute="trailing" constant="20" id="Sbz-XH-6lE"/>
+                            <constraint firstItem="K1K-eK-fJs" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="15" id="fCD-YH-YpY"/>
                             <constraint firstItem="xxb-Pn-CpY" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="85" id="hDq-aw-7ma"/>
                             <constraint firstItem="G3N-i2-Jcp" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="10" id="jFd-r1-zBx"/>
+                            <constraint firstItem="vpl-Mb-4eX" firstAttribute="leading" secondItem="FO2-F4-Bwh" secondAttribute="trailing" constant="20" id="n3Z-aD-pac"/>
+                            <constraint firstItem="FO2-F4-Bwh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="qgZ-pY-lLZ"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="K1K-eK-fJs" secondAttribute="trailing" constant="15" id="rRg-gC-1hk"/>
                             <constraint firstItem="G3N-i2-Jcp" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="tTj-dB-WLp"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="FO2-F4-Bwh" secondAttribute="bottom" constant="15" id="vEY-gf-Hby"/>
                             <constraint firstItem="iRl-PP-CBE" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="xcc-rS-IfP"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="iRl-PP-CBE" secondAttribute="trailing" constant="15" id="xuA-FS-NU7"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="K1K-eK-fJs" secondAttribute="bottom" constant="15" id="yeh-Tx-TTA"/>
                             <constraint firstItem="Ebf-UL-RjB" firstAttribute="top" secondItem="G3N-i2-Jcp" secondAttribute="bottom" constant="210" id="yjY-rv-cpB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -435,9 +478,12 @@
     </scenes>
     <resources>
         <image name="dropdownArrow" width="25" height="25"/>
+        <image name="facebookIcon" width="85" height="85"/>
         <image name="first" width="30" height="30"/>
         <image name="infoIcon" width="50" height="50"/>
+        <image name="instagramIcon" width="533" height="533"/>
         <image name="second" width="30" height="30"/>
+        <image name="twitterIcon" width="50" height="50"/>
         <image name="uncheckedBox" width="25" height="25"/>
         <image name="xIcon" width="25" height="25"/>
     </resources>

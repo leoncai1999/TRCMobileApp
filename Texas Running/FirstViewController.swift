@@ -24,6 +24,29 @@ class FirstViewController: UIViewController {
         submitButton.clipsToBounds = true
         adjustTimeText()
     }
+    
+    @IBAction func facebookRedirect(_ sender: UIButton) {
+        UIApplication.tryURL(urls: [
+            "fb://profile/TexasRunningClub", // Attempt to open in app first
+            "http://www.facebook.com/TexasRunningClub" // Open in website otherwsie
+            ])
+    }
+    
+    @IBAction func instagramRedirect(_ sender: UIButton) {
+        UIApplication.tryURL(urls: [
+            "instagram://user?username=texasrunningclub", // Attempt to open in app first
+            "https://www.instagram.com/texasrunningclub/" // Open in website otherwsie
+            ])
+    }
+    
+    @IBAction func twitterRedirect(_ sender: UIButton) {
+        UIApplication.tryURL(urls: [
+            "twitter://user?screen_name=texasrunning", // Attempt to open in app first
+            "https://twitter.com/TexasRunning" // Open in website otherwsie
+            ])
+    }
+    
+    
 
     func adjustTimeText() {
         let hour = Calendar.current.component(.hour, from: Date())
