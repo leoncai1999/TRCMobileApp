@@ -58,10 +58,11 @@ class FirstViewController: UIViewController {
 
     func adjustTimeText() {
         let hour = Calendar.current.component(.hour, from: Date())
+        // also need to account for DST here
         let dayOfWeek = getDayOfWeek()
-        if (dayOfWeek == 6 || dayOfWeek == 7 || (dayOfWeek == 5 && hour > 18)) {
+        if (dayOfWeek == 6 || dayOfWeek == 7 || (dayOfWeek == 5 && hour >= 18)) {
             timeText.text = "Poll Closes Monday at " + closeTime
-        } else if (hour > 18 || dayOfWeek == 1) {
+        } else if (hour >= 18 || dayOfWeek == 1) {
             timeText.text = "Poll Closes Tomorrow at " + closeTime
         } else {
             timeText.text = "Poll Closes Today at " + closeTime
