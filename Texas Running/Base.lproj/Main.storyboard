@@ -430,15 +430,47 @@
                                     <action selector="showRegions:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Naa-8M-5nu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRM-0c-CP2">
+                                <rect key="frame" x="330" y="573" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fiveMiles:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ce8-Mo-DSS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV9-Q0-YuC">
+                                <rect key="frame" x="300" y="573" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="threeMiles:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XSh-Ki-SGJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Mileage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCo-3S-5vV">
+                                <rect key="frame" x="152" y="577" width="138" height="26"/>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.2470588235" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="REC-dP-wmv" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="18" id="0Sx-ot-JyT"/>
                             <constraint firstItem="xYD-JS-dJx" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="0vR-Be-XuE"/>
                             <constraint firstItem="8Yl-cw-bd7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="1dk-Wd-9WR"/>
+                            <constraint firstItem="IV9-Q0-YuC" firstAttribute="leading" secondItem="rCo-3S-5vV" secondAttribute="trailing" constant="10" id="5eM-u9-CdN"/>
+                            <constraint firstItem="lRM-0c-CP2" firstAttribute="leading" secondItem="IV9-Q0-YuC" secondAttribute="trailing" id="78r-UP-nNZ"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="8Yl-cw-bd7" secondAttribute="trailing" id="7ae-jM-dVT"/>
                             <constraint firstItem="6sI-WC-2l3" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="15" id="Jdh-Ux-OeL"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="rCo-3S-5vV" secondAttribute="bottom" constant="15" id="QSn-7q-ecc"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="IV9-Q0-YuC" secondAttribute="bottom" constant="15" id="SWp-1j-r71"/>
                             <constraint firstItem="REC-dP-wmv" firstAttribute="leading" secondItem="6sI-WC-2l3" secondAttribute="trailing" constant="135" id="Ugk-U2-E6i"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="lRM-0c-CP2" secondAttribute="bottom" constant="15" id="akm-LY-b0q"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="lRM-0c-CP2" secondAttribute="trailing" constant="15" id="bec-5t-EEp"/>
                             <constraint firstItem="8Yl-cw-bd7" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="hHY-fq-PUY"/>
                             <constraint firstItem="6sI-WC-2l3" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="pqc-NC-xEQ"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="8Yl-cw-bd7" secondAttribute="bottom" id="vsW-NV-8mW"/>
@@ -448,8 +480,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="fiveMiles" destination="lRM-0c-CP2" id="6V9-JO-mCs"/>
                         <outlet property="map" destination="8Yl-cw-bd7" id="YQc-Vt-o2t"/>
                         <outlet property="regionsField" destination="xYD-JS-dJx" id="uoL-O9-hyj"/>
+                        <outlet property="threeMiles" destination="IV9-Q0-YuC" id="V3l-C2-VlO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
