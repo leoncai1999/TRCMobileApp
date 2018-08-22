@@ -20,4 +20,9 @@ class TwitterViewController: TWTRTimelineViewController, TWTRTweetViewDelegate {
         self.showTweetActions = true
     }
     
+    @IBAction func dismiss(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

@@ -21,6 +21,11 @@ class webviewController: UIViewController, WKNavigationDelegate {
         self.view = self.webView!
     }
     
+    @IBAction func dismiss(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // url to join email list

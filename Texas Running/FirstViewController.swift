@@ -13,6 +13,7 @@ class FirstViewController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var timeText: UILabel!
+    @IBOutlet weak var emailButton: UIButton!
     
     var closeTime = "6:00 PM"
     
@@ -23,6 +24,9 @@ class FirstViewController: UIViewController {
         // rounds the edges of the button
         submitButton.layer.cornerRadius = 5
         submitButton.clipsToBounds = true
+        
+        emailButton.layer.cornerRadius = 5
+        emailButton.clipsToBounds = true
         
         // check for daylight savings
         let date = Date()
@@ -46,14 +50,6 @@ class FirstViewController: UIViewController {
             "https://www.instagram.com/texasrunningclub/" // Open in website otherwsie
             ])
     }
-    
-    @IBAction func twitterRedirect(_ sender: UIButton) {
-        UIApplication.tryURL(urls: [
-            "twitter://user?screen_name=texasrunning", // Attempt to open in app first
-            "https://twitter.com/TexasRunning" // Open in website otherwsie
-            ])
-    }
-    
     
 
     func adjustTimeText() {

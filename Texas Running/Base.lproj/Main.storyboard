@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Webview Controller-->
+        <!--Join Email List-->
         <scene sceneID="xJT-ci-jzi">
             <objects>
                 <viewController id="Akt-42-2Rg" customClass="webviewController" customModule="Texas_Running" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-oQ-Lqk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -44,13 +44,55 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nsb-Iq-VsY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Join Email List" id="u7x-s6-A2x">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="tkS-MH-bDR">
+                            <connections>
+                                <action selector="dismiss:" destination="Akt-42-2Rg" id="lND-Ia-lbQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="d7K-oQ-Lqk" id="p0M-BE-Rm8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="na2-mO-41I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="-1027"/>
+            <point key="canvasLocation" x="1606" y="-1254"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="07k-Qm-FT4">
+            <objects>
+                <tableViewController id="peq-D1-MXF" customClass="TwitterViewController" customModule="Texas_Running" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CHa-aM-8hv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kaF-Te-h9b">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kaF-Te-h9b" id="JBs-G5-Vrf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="peq-D1-MXF" id="oxJ-34-K8h"/>
+                            <outlet property="delegate" destination="peq-D1-MXF" id="1fC-xG-ebv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News Feed" id="toX-Bj-i9X">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="TxA-56-T3q">
+                            <connections>
+                                <action selector="dismiss:" destination="peq-D1-MXF" id="0yK-3Q-NiG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nz2-ge-4Tz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="-1963"/>
         </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -187,7 +229,7 @@
                                 </constraints>
                                 <state key="normal" image="twitterIcon"/>
                                 <connections>
-                                    <action selector="twitterRedirect:" destination="9pv-A4-QxB" eventType="touchUpInside" id="24a-XC-EUd"/>
+                                    <segue destination="nm9-lI-D4D" kind="show" id="EQ4-He-Owt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-1J-n9t">
@@ -201,7 +243,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Akt-42-2Rg" kind="show" id="Rum-5q-oxp"/>
+                                    <segue destination="URr-N2-uGG" kind="show" id="cBK-1b-rv5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,13 +275,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="emailButton" destination="0G3-1J-n9t" id="Ibe-sp-jRq"/>
                         <outlet property="submitButton" destination="Ebf-UL-RjB" id="ftj-wC-74P"/>
                         <outlet property="timeText" destination="G3N-i2-Jcp" id="s5d-cj-37B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="-159.19999999999999" y="-1254.4227886056972"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="RxL-A3-9Tm">
@@ -367,37 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZM-N8-ZCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="-321"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="naN-dW-AL4">
-            <objects>
-                <tableViewController id="eQd-kp-BmP" customClass="TwitterViewController" customModule="Texas_Running" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0ZZ-Ug-BKu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MXv-Kd-TXA">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MXv-Kd-TXA" id="1lZ-Hh-y5P">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="eQd-kp-BmP" id="hx2-Dm-7Hn"/>
-                            <outlet property="delegate" destination="eQd-kp-BmP" id="5E5-Ld-KD4"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="tDK-EG-fE2"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ff5-iP-pfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-903" y="359"/>
+            <point key="canvasLocation" x="750" y="-475"/>
         </scene>
         <!--Item-->
         <scene sceneID="j5C-wH-6EL">
@@ -537,7 +550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2u-wg-IYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="700.29985007496259"/>
+            <point key="canvasLocation" x="-1263" y="263"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -630,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="-159" y="-475"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -645,12 +658,47 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="12M-vA-X1Z" kind="relationship" relationship="viewControllers" id="hht-zy-9tP"/>
-                        <segue destination="eQd-kp-BmP" kind="relationship" relationship="viewControllers" id="wVO-we-W5i"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-1263" y="-590"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VxN-ZU-t12">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="URr-N2-uGG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fZs-Xq-tQa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Akt-42-2Rg" kind="relationship" relationship="rootViewController" id="cxr-B9-rs2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eh-oq-tHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-1254"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N5G-b5-MWF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nm9-lI-D4D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y6k-cI-zhl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="peq-D1-MXF" kind="relationship" relationship="rootViewController" id="FDj-Rf-1HB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vED-ec-X6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-1963"/>
         </scene>
     </scenes>
     <resources>
