@@ -21,7 +21,6 @@
         <!--Webview Controller-->
         <scene sceneID="xJT-ci-jzi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="na2-mO-41I" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Akt-42-2Rg" customClass="webviewController" customModule="Texas_Running" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NDS-R6-Pjw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -49,6 +48,7 @@
                         <outlet property="webView" destination="d7K-oQ-Lqk" id="p0M-BE-Rm8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="na2-mO-41I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1510" y="-1027"/>
         </scene>
@@ -417,39 +417,29 @@
                                 <rect key="frame" x="0.0" y="83" width="375" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="facebookPost" rowHeight="98" id="CFI-Ql-MPT" customClass="facebookPost" customModule="Texas_Running" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stravaPost" rowHeight="98" id="CFI-Ql-MPT" customClass="stravaPost" customModule="Texas_Running" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CFI-Ql-MPT" id="OIp-j7-Jjw">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CFI-Ql-MPT" id="OIp-j7-Jjw" customClass="stravaPost" customModule="Texas_Running" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b11-Li-Eag">
-                                                    <rect key="frame" x="15" y="5" width="345" height="22.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0J-AQ-X5z">
+                                                    <rect key="frame" x="15" y="5" width="345" height="87.5"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kL-6d-lu9">
-                                                    <rect key="frame" x="15" y="38" width="345" height="43"/>
-                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.2470588235" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7kL-6d-lu9" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="9FE-lw-uuD"/>
-                                                <constraint firstAttribute="trailing" secondItem="7kL-6d-lu9" secondAttribute="trailing" constant="15" id="9s4-JY-bVQ"/>
-                                                <constraint firstItem="b11-Li-Eag" firstAttribute="top" secondItem="OIp-j7-Jjw" secondAttribute="top" constant="5" id="DrF-BL-6HN"/>
-                                                <constraint firstAttribute="trailing" secondItem="b11-Li-Eag" secondAttribute="trailing" constant="15" id="FQw-3s-hQ1"/>
-                                                <constraint firstAttribute="bottom" secondItem="7kL-6d-lu9" secondAttribute="bottom" constant="5" id="T95-LB-cJD"/>
-                                                <constraint firstItem="b11-Li-Eag" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="TQr-ZW-1Bk"/>
-                                                <constraint firstItem="7kL-6d-lu9" firstAttribute="top" secondItem="b11-Li-Eag" secondAttribute="bottom" constant="10" id="oQS-T2-t4J"/>
+                                                <constraint firstItem="l0J-AQ-X5z" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="3ds-fC-2Sj"/>
+                                                <constraint firstAttribute="bottom" secondItem="l0J-AQ-X5z" secondAttribute="bottom" constant="5" id="6z4-0p-62E"/>
+                                                <constraint firstAttribute="trailing" secondItem="l0J-AQ-X5z" secondAttribute="trailing" constant="15" id="DVq-cA-IbI"/>
+                                                <constraint firstItem="l0J-AQ-X5z" firstAttribute="top" secondItem="OIp-j7-Jjw" secondAttribute="top" constant="5" id="XRq-QS-wRJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="postDescription" destination="7kL-6d-lu9" id="LVw-Fj-1UP"/>
-                                            <outlet property="postTime" destination="b11-Li-Eag" id="OpR-U6-4Tz"/>
+                                            <outlet property="runDescription" destination="l0J-AQ-X5z" id="XVm-F0-L0D"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -7,13 +7,10 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 
-class facebookPost: UITableViewCell {
+class stravaPost: UITableViewCell {
+    @IBOutlet weak var runDescription: UILabel!
     
-    @IBOutlet weak var postTime: UILabel!
-    @IBOutlet weak var postDescription: UILabel!
     
 }
 
@@ -21,8 +18,9 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: Properties
     @IBOutlet weak var tableView: UITableView!
-    //var facebookPosts: [Posts] = []
     
+    // from the club activies class
+    var activities = [ClubActivityElement]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +34,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        
+        fetchStravaPosts()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +42,32 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-
+    func fetchStravaPosts() {
+        // obtaining a json file of recent member activies on Strava using Strava API
+        let urlString = "https://www.strava.com/api/v3/clubs/111449/activities?access_token=" + keys.stravaKey
+        
+        if let url = URL(string: urlString) {
+            do {
+                let contents = try String(contentsOf: url)
+                
+                let data = contents.data(using: String.Encoding.utf8)
+                
+                activities = try JSONDecoder().decode([ClubActivityElement].self, from: data!)
+                
+                print ("magic begins here")
+                for activity in activities {
+                    print (activity.name)
+                }
+                
+            } catch {
+                // contents could not be loaded
+            }
+        } else {
+            // the URL was bad
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -67,12 +90,11 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return facebookPosts.count
-        return 1
+        return activities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "facebookPost", for: indexPath) as? facebookPost
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stravaPost", for: indexPath) as? stravaPost
         return cell!
     }
 

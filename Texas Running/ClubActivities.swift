@@ -9,9 +9,10 @@
 import Foundation
 
 // decoding json file from strava of recent runs from members of the Texas Running Club
-typealias Welcome = [WelcomeElement]
 
-struct WelcomeElement: Codable {
+typealias ClubActivity = [ClubActivityElement]
+
+struct ClubActivityElement: Codable {
     let resourceState: Int
     let athlete: Athlete
     let name: String
@@ -45,3 +46,4 @@ struct Athlete: Codable {
 enum TypeEnum: String, Codable {
     case run = "Run"
 }
+
