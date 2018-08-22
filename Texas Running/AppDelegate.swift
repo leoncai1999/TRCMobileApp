@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-       // Twitter API Keys I got from my Twitter Developer Account
-    TWTRTwitter.sharedInstance().start(withConsumerKey:"insertTwitterAPIKEY", consumerSecret:"insertTwitterSecret")
+       // Twitter API Keys I got from my Twitter Developer Account (confidential information stored in a APIKeys .gitignore file)
+    TWTRTwitter.sharedInstance().start(withConsumerKey: keys.twitterKey, consumerSecret: keys.twitterSecret)
         return true
     }
     
