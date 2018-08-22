@@ -437,25 +437,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-Yn-F1V">
-                                                    <rect key="frame" x="15" y="57" width="55" height="17"/>
+                                                    <rect key="frame" x="15" y="57" width="65" height="17"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="55" id="Myc-pt-MvK"/>
+                                                        <constraint firstAttribute="width" constant="65" id="Myc-pt-MvK"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="26.6 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-zw-6DZ">
-                                                    <rect key="frame" x="15" y="82" width="55" height="21"/>
+                                                    <rect key="frame" x="15" y="82" width="65" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="55" id="kJZ-9v-tfs"/>
+                                                        <constraint firstAttribute="width" constant="65" id="kJZ-9v-tfs"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pace" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5e-o8-o6C">
-                                                    <rect key="frame" x="90.5" y="57" width="75" height="17"/>
+                                                    <rect key="frame" x="100.5" y="57" width="75" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="0sE-jo-Yvh"/>
                                                     </constraints>
@@ -464,7 +464,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="12:00 /mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="art-Sl-UoR">
-                                                    <rect key="frame" x="90" y="82" width="75" height="21"/>
+                                                    <rect key="frame" x="100" y="82" width="75" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="cGo-PF-PDg"/>
                                                     </constraints>
@@ -473,13 +473,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17K-OX-yaR">
-                                                    <rect key="frame" x="185" y="57" width="30" height="17"/>
+                                                    <rect key="frame" x="195" y="57" width="30" height="17"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1h 35m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dv-X9-HSk">
-                                                    <rect key="frame" x="185" y="82" width="52.5" height="21"/>
+                                                    <rect key="frame" x="195" y="82" width="52.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

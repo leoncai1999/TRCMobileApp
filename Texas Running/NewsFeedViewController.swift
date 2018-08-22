@@ -8,6 +8,7 @@
 
 import UIKit
 
+// custom cell class for an athlete's strava post
 class stravaPost: UITableViewCell {
     @IBOutlet weak var runnerName: UILabel!
     @IBOutlet weak var runDescription: UILabel!
@@ -94,11 +95,37 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stravaPost", for: indexPath) as? stravaPost
+        cell?.runnerName.text = activities[indexPath.row].athlete.firstname + " " + activities[indexPath.row].athlete.lastname
         cell?.runDescription.text = activities[indexPath.row].name
-        cell?.distanceRan.text = String(activities[indexPath.row].distance)
-        cell?.runningTime.text = String(activities[indexPath.row].elapsedTime)
-        
+        let distance = activities[indexPath.row].distance
+        // converting distance from meters to miles
+        let distanceInMi = distance/1609.34
+        let distanceInMiStr = String(format: "%.02f", distanceInMi)
+        cell?.distanceRan.text = distanceInMiStr + " mi"
+        let time = activities[indexPath.row].movingTime
+        cell?.runningTime.text = formatTime(time: time)
+        cell?.runningPace.text = calculatePace(time: time, dist: distanceInMi)
         return cell!
+    }
+    
+    // converts time to hour : min format
+    func formatTime(time: Int) -> String {
+        let minutes = (time / 60) % 60
+        let hours = (time / 3600)
+        return String(hours) + "h " + String(minutes) + "m"
+    }
+    
+    // converts moving time to minute per mile pace
+    // seconds not being calculated correctly sometimes
+    func calculatePace(time: Int, dist: Double) -> String {
+        let minutes = (Double(time)/60.0)
+        let pace = minutes/dist
+        
+        let minute = String(pace).components(separatedBy: ".")[0]
+        let seconds = String(pace).components(separatedBy: ".")[1]
+        let formattedSeconds = Int(seconds)! * 6
+        let formattedSeconds2 = String(formattedSeconds).prefix(2)
+        return minute + ":" + formattedSeconds2 + " /mi"
     }
 
 }
