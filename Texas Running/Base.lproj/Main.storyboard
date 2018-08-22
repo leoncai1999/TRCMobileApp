@@ -407,39 +407,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6We-KW-QKC">
-                                <rect key="frame" x="15" y="35" width="345" height="33"/>
-                                <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Activities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6We-KW-QKC">
+                                <rect key="frame" x="15" y="35" width="345" height="26"/>
+                                <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5VD-Pe-7fX">
-                                <rect key="frame" x="0.0" y="83" width="375" height="535"/>
+                                <rect key="frame" x="0.0" y="71" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stravaPost" rowHeight="98" id="CFI-Ql-MPT" customClass="stravaPost" customModule="Texas_Running" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="98"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stravaPost" rowHeight="120" id="CFI-Ql-MPT" customClass="stravaPost" customModule="Texas_Running" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CFI-Ql-MPT" id="OIp-j7-Jjw" customClass="stravaPost" customModule="Texas_Running" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CFI-Ql-MPT" id="OIp-j7-Jjw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0J-AQ-X5z">
-                                                    <rect key="frame" x="15" y="5" width="345" height="87.5"/>
-                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="17"/>
-                                                    <color key="textColor" red="0.20000000000000001" green="0.2470588235" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0J-AQ-X5z">
+                                                    <rect key="frame" x="15" y="29.5" width="345" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Bold" family="IBM Plex Sans" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Runner Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1A0-4n-diS">
+                                                    <rect key="frame" x="15" y="5" width="93.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-Yn-F1V">
+                                                    <rect key="frame" x="15" y="57" width="55" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="55" id="Myc-pt-MvK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="26.6 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-zw-6DZ">
+                                                    <rect key="frame" x="15" y="82" width="55" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="55" id="kJZ-9v-tfs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pace" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5e-o8-o6C">
+                                                    <rect key="frame" x="90.5" y="57" width="75" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="0sE-jo-Yvh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="12:00 /mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="art-Sl-UoR">
+                                                    <rect key="frame" x="90" y="82" width="75" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="cGo-PF-PDg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17K-OX-yaR">
+                                                    <rect key="frame" x="185" y="57" width="30" height="17"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1h 35m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dv-X9-HSk">
+                                                    <rect key="frame" x="185" y="82" width="52.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexSans-Text" family="IBM Plex Sans" pointSize="15"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="l0J-AQ-X5z" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="3ds-fC-2Sj"/>
-                                                <constraint firstAttribute="bottom" secondItem="l0J-AQ-X5z" secondAttribute="bottom" constant="5" id="6z4-0p-62E"/>
-                                                <constraint firstAttribute="trailing" secondItem="l0J-AQ-X5z" secondAttribute="trailing" constant="15" id="DVq-cA-IbI"/>
-                                                <constraint firstItem="l0J-AQ-X5z" firstAttribute="top" secondItem="OIp-j7-Jjw" secondAttribute="top" constant="5" id="XRq-QS-wRJ"/>
+                                                <constraint firstItem="1A0-4n-diS" firstAttribute="top" secondItem="OIp-j7-Jjw" secondAttribute="top" constant="5" id="5sL-rU-8CA"/>
+                                                <constraint firstItem="l0J-AQ-X5z" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="7dV-K6-ffC"/>
+                                                <constraint firstItem="k5e-o8-o6C" firstAttribute="leading" secondItem="1e4-Yn-F1V" secondAttribute="trailing" constant="20" id="9a2-pG-YWf"/>
+                                                <constraint firstItem="1A0-4n-diS" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="K0C-m1-CJJ"/>
+                                                <constraint firstItem="1e4-Yn-F1V" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="Nat-Zl-Fv3"/>
+                                                <constraint firstItem="17K-OX-yaR" firstAttribute="top" secondItem="l0J-AQ-X5z" secondAttribute="bottom" constant="5" id="PVl-hY-5jz"/>
+                                                <constraint firstAttribute="bottom" secondItem="vQ4-zw-6DZ" secondAttribute="bottom" constant="5" id="Pfm-zb-sTw"/>
+                                                <constraint firstItem="vQ4-zw-6DZ" firstAttribute="top" secondItem="1e4-Yn-F1V" secondAttribute="bottom" constant="5" id="Plh-zA-psL"/>
+                                                <constraint firstItem="l0J-AQ-X5z" firstAttribute="top" secondItem="1A0-4n-diS" secondAttribute="bottom" constant="5" id="Q6A-Rt-WsH"/>
+                                                <constraint firstItem="art-Sl-UoR" firstAttribute="top" secondItem="k5e-o8-o6C" secondAttribute="bottom" constant="5" id="Qqn-B2-wv0"/>
+                                                <constraint firstAttribute="trailing" secondItem="l0J-AQ-X5z" secondAttribute="trailing" constant="15" id="Qza-Hi-VHP"/>
+                                                <constraint firstItem="1e4-Yn-F1V" firstAttribute="top" secondItem="l0J-AQ-X5z" secondAttribute="bottom" constant="5" id="VqK-Io-vjE"/>
+                                                <constraint firstItem="7dv-X9-HSk" firstAttribute="leading" secondItem="art-Sl-UoR" secondAttribute="trailing" constant="20" id="gt4-vS-nMq"/>
+                                                <constraint firstItem="art-Sl-UoR" firstAttribute="leading" secondItem="vQ4-zw-6DZ" secondAttribute="trailing" constant="20" id="j04-s3-3x9"/>
+                                                <constraint firstItem="7dv-X9-HSk" firstAttribute="top" secondItem="17K-OX-yaR" secondAttribute="bottom" constant="5" id="ml3-Hs-T06"/>
+                                                <constraint firstItem="17K-OX-yaR" firstAttribute="leading" secondItem="k5e-o8-o6C" secondAttribute="trailing" constant="20" id="nV4-C0-Bkr"/>
+                                                <constraint firstItem="k5e-o8-o6C" firstAttribute="top" secondItem="l0J-AQ-X5z" secondAttribute="bottom" constant="5" id="oLp-fj-hM6"/>
+                                                <constraint firstItem="vQ4-zw-6DZ" firstAttribute="leading" secondItem="OIp-j7-Jjw" secondAttribute="leading" constant="15" id="wDS-Eq-Z3j"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="distanceRan" destination="vQ4-zw-6DZ" id="CkX-dy-kjC"/>
                                             <outlet property="runDescription" destination="l0J-AQ-X5z" id="XVm-F0-L0D"/>
+                                            <outlet property="runnerName" destination="1A0-4n-diS" id="9cs-MA-cyv"/>
+                                            <outlet property="runningPace" destination="art-Sl-UoR" id="zLU-3B-XRz"/>
+                                            <outlet property="runningTime" destination="7dv-X9-HSk" id="1nE-OM-52C"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -451,7 +523,7 @@
                             <constraint firstItem="6We-KW-QKC" firstAttribute="top" secondItem="LEE-Od-Z1V" secondAttribute="top" constant="15" id="Pdh-0m-UP2"/>
                             <constraint firstItem="LEE-Od-Z1V" firstAttribute="trailing" secondItem="6We-KW-QKC" secondAttribute="trailing" constant="15" id="f6Z-BW-Hqk"/>
                             <constraint firstItem="LEE-Od-Z1V" firstAttribute="trailing" secondItem="5VD-Pe-7fX" secondAttribute="trailing" id="jSu-iv-tNQ"/>
-                            <constraint firstItem="5VD-Pe-7fX" firstAttribute="top" secondItem="6We-KW-QKC" secondAttribute="bottom" constant="15" id="sMj-sc-bTa"/>
+                            <constraint firstItem="5VD-Pe-7fX" firstAttribute="top" secondItem="6We-KW-QKC" secondAttribute="bottom" constant="10" id="sMj-sc-bTa"/>
                             <constraint firstItem="5VD-Pe-7fX" firstAttribute="leading" secondItem="LEE-Od-Z1V" secondAttribute="leading" id="tVY-8b-6kL"/>
                             <constraint firstItem="6We-KW-QKC" firstAttribute="leading" secondItem="LEE-Od-Z1V" secondAttribute="leading" constant="15" id="xvZ-xI-oEN"/>
                         </constraints>

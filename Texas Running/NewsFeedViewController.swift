@@ -9,8 +9,11 @@
 import UIKit
 
 class stravaPost: UITableViewCell {
+    @IBOutlet weak var runnerName: UILabel!
     @IBOutlet weak var runDescription: UILabel!
-    
+    @IBOutlet weak var distanceRan: UILabel!
+    @IBOutlet weak var runningPace: UILabel!
+    @IBOutlet weak var runningTime: UILabel!
     
 }
 
@@ -54,11 +57,6 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
                 
                 activities = try JSONDecoder().decode([ClubActivityElement].self, from: data!)
                 
-                print ("magic begins here")
-                for activity in activities {
-                    print (activity.name)
-                }
-                
             } catch {
                 // contents could not be loaded
             }
@@ -66,6 +64,7 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
             // the URL was bad
         }
     }
+    
     
     
     /*
@@ -95,6 +94,10 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stravaPost", for: indexPath) as? stravaPost
+        cell?.runDescription.text = activities[indexPath.row].name
+        cell?.distanceRan.text = String(activities[indexPath.row].distance)
+        cell?.runningTime.text = String(activities[indexPath.row].elapsedTime)
+        
         return cell!
     }
 
