@@ -15,7 +15,8 @@ class TwitterViewController: TWTRTimelineViewController, TWTRTweetViewDelegate {
         super.viewDidLoad()
         
         let client = TWTRAPIClient()
-        self.dataSource = TWTRUserTimelineDataSource(screenName: "texasrunning", apiClient: client)
+        // Curated list of running twitter accounts adjusted via the list functionality of my personal twitter account
+        self.dataSource = TWTRListTimelineDataSource(listSlug: "RunningAccounts", listOwnerScreenName: "leoncai1999", apiClient: TWTRAPIClient())
         self.showTweetActions = true
     }
     
