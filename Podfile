@@ -8,6 +8,7 @@ target 'Texas Running' do
   # Pods for Texas Running
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
+pod 'TwitterKit'
 
   target 'Texas RunningTests' do
     inherit! :search_paths
