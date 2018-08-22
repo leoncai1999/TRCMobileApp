@@ -7,6 +7,11 @@ the project, click on the 'Texas Running' folder.
 
 Language: Swift 
 
-Frameworks Used: Apple MapKit, Apple WebKit
+Frameworks Used: Apple MapKit, Apple WebKit, TwitterKit
 
-API's Used: Instagram Graph API (In Progress)
+API's Used: Strava API (In Progress)
+
+NOTE: If attempting to recreate this app, you will need to register for a Twitter Developer
+Account, create an App in your Twitter Dev Account (this doesn't actually obligate you to
+make an app), and from there obtain your Consumer API Keys. Then in the AppDelegate.Swift
+file, replace keys.TwitterKey and keys.TwitterSecret with your keys. 
