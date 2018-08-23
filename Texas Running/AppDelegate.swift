@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import TwitterKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
        // Twitter API Keys I got from my Twitter Developer Account (confidential information stored in a APIKeys .gitignore file)
     TWTRTwitter.sharedInstance().start(withConsumerKey: keys.twitterKey, consumerSecret: keys.twitterSecret)
+        FirebaseApp.configure()
         return true
     }
     
