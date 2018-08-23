@@ -166,6 +166,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitChoice:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Xfs-nA-INW"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-Pn-CpY">
                                 <rect key="frame" x="335" y="152.5" width="25" height="124"/>
@@ -187,10 +190,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpG-zN-eZg" customClass="checkBox" customModule="Texas_Running" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="66" width="25" height="25"/>
                                         <state key="normal" image="uncheckedBox"/>
+                                        <connections>
+                                            <action selector="westDidTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Evn-fC-APf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXn-n5-ze0" customClass="checkBox" customModule="Texas_Running" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="99" width="25" height="25"/>
                                         <state key="normal" image="uncheckedBox"/>
+                                        <connections>
+                                            <action selector="shoalDidTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ir6-PW-O5W"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -291,8 +300,12 @@
                     <connections>
                         <outlet property="conditionLabel" destination="8lA-Rq-aDO" id="GIP-9M-pk7"/>
                         <outlet property="emailButton" destination="0G3-1J-n9t" id="Ibe-sp-jRq"/>
+                        <outlet property="northButton" destination="awG-XN-j5h" id="eGq-u5-VxT"/>
+                        <outlet property="shoalButton" destination="yXn-n5-ze0" id="jyU-Yh-GNl"/>
+                        <outlet property="southButton" destination="o3V-cC-D8r" id="GbO-0K-iJo"/>
                         <outlet property="submitButton" destination="Ebf-UL-RjB" id="ftj-wC-74P"/>
                         <outlet property="timeText" destination="G3N-i2-Jcp" id="s5d-cj-37B"/>
+                        <outlet property="westButton" destination="bpG-zN-eZg" id="mPj-V2-gxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
