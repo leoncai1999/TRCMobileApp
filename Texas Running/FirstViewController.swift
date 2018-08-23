@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class FirstViewController: UIViewController {
     
@@ -14,6 +16,11 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var timeText: UILabel!
     @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var conditionLabel: UILabel!
+    
+    
+    // reference to firebase database
+    let rootRef = Database.database().reference()
     
     var closeTime = "6:00 PM"
     
@@ -36,6 +43,22 @@ class FirstViewController: UIViewController {
         }
         adjustTimeText()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let routeRef = rootRef.child("route")
+        routeRef.observe(.value) { (snap: DataSnapshot) in
+            self.conditionLabel.text = (snap.value as AnyObject).description
+        }
+    }
+    
+    @IBAction func southDidTouch(_ sender: UIButton) {
+    }
+    
+    @IBAction func northDidTouch(_ sender: UIButton) {
+    }
+    
+    
     
     @IBAction func facebookRedirect(_ sender: UIButton) {
         UIApplication.tryURL(urls: [

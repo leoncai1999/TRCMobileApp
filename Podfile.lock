@@ -9,6 +9,8 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.34.0):
     - FBSDKCoreKit
+  - Firebase (5.4.0):
+    - Firebase/Core (= 5.4.0)
   - Firebase/Core (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.0.1)
@@ -45,6 +47,7 @@ PODS:
 DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
+  - Firebase
   - Firebase/Core
   - Firebase/Database
   - TwitterKit
@@ -80,6 +83,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: d889fe47a4e4a8d885e2c0b84e61c1eff2a0c16e
+PODFILE CHECKSUM: 66c3cd4c36c66b667999a10c5cfcfd30268ece5a
 
 COCOAPODS: 1.5.3

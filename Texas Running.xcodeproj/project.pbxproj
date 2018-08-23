@@ -23,7 +23,7 @@
 		8096740B21081F0B00F71B58 /* Texas_RunningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8096740A21081F0B00F71B58 /* Texas_RunningTests.swift */; };
 		80967416210821C800F71B58 /* IBMPlexSans-Text.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80967415210821C700F71B58 /* IBMPlexSans-Text.ttf */; };
 		80967418210821D700F71B58 /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80967417210821D600F71B58 /* IBMPlexSans-Bold.ttf */; };
-		80BDB426212F1B9000A19B0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80BDB425212F1B8F00A19B0B /* GoogleService-Info.plist */; };
+		80BDB428212F38DE00A19B0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80BDB427212F38DE00A19B0B /* GoogleService-Info.plist */; };
 		80E681F02129D8A8008725D4 /* checkBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E681EF2129D8A8008725D4 /* checkBox.swift */; };
 		80E681F2212A0251008725D4 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E681F1212A0251008725D4 /* NewsFeedViewController.swift */; };
 		D4128D8B427FD580973BE589 /* Pods_Texas_Running.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A676FA230178655A79AD7A9 /* Pods_Texas_Running.framework */; };
@@ -63,7 +63,7 @@
 		8096740C21081F0B00F71B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80967415210821C700F71B58 /* IBMPlexSans-Text.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Text.ttf"; sourceTree = "<group>"; };
 		80967417210821D600F71B58 /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
-		80BDB425212F1B8F00A19B0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80BDB427212F38DE00A19B0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		80E681EF2129D8A8008725D4 /* checkBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
 		80E681F1212A0251008725D4 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		A3771C71516BEC1436D94902 /* Pods-Texas RunningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Texas RunningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Texas RunningTests/Pods-Texas RunningTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 				80E681EF2129D8A8008725D4 /* checkBox.swift */,
 				809673FC21081F0A00F71B58 /* Assets.xcassets */,
 				809673FE21081F0A00F71B58 /* LaunchScreen.storyboard */,
-				80BDB425212F1B8F00A19B0B /* GoogleService-Info.plist */,
 				8096740121081F0A00F71B58 /* Info.plist */,
+				80BDB427212F38DE00A19B0B /* GoogleService-Info.plist */,
 			);
 			path = "Texas Running";
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 				8096740021081F0A00F71B58 /* LaunchScreen.storyboard in Resources */,
 				809673FD21081F0A00F71B58 /* Assets.xcassets in Resources */,
 				809673FB21081EFE00F71B58 /* Main.storyboard in Resources */,
-				80BDB426212F1B9000A19B0B /* GoogleService-Info.plist in Resources */,
+				80BDB428212F38DE00A19B0B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

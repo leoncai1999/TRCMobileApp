@@ -9,6 +9,7 @@ target 'Texas Running' do
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'TwitterKit'
+pod 'Firebase'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 

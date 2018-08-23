@@ -173,10 +173,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3V-cC-D8r" customClass="checkBox" customModule="Texas_Running" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                         <state key="normal" image="uncheckedBox"/>
+                                        <connections>
+                                            <action selector="southDidTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ptz-UM-2Bl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awG-XN-j5h" customClass="checkBox" customModule="Texas_Running" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="33" width="25" height="25"/>
                                         <state key="normal" image="uncheckedBox"/>
+                                        <connections>
+                                            <action selector="northDidTouch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="FSC-z4-mg9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpG-zN-eZg" customClass="checkBox" customModule="Texas_Running" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="66" width="25" height="25"/>
@@ -246,10 +252,17 @@
                                     <segue destination="URr-N2-uGG" kind="show" id="cBK-1b-rv5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lA-Rq-aDO">
+                                <rect key="frame" x="318" y="321.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.3411764706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="0G3-1J-n9t" secondAttribute="trailing" constant="15" id="0Rg-QO-exd"/>
+                            <constraint firstItem="8lA-Rq-aDO" firstAttribute="top" secondItem="xxb-Pn-CpY" secondAttribute="bottom" constant="45" id="47t-or-c7z"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="pCP-p6-giO" secondAttribute="bottom" constant="15" id="5rW-t0-4td"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="0G3-1J-n9t" secondAttribute="bottom" constant="15" id="B1R-9q-SZI"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="vpl-Mb-4eX" secondAttribute="bottom" constant="15" id="Id8-uM-l3F"/>
@@ -261,6 +274,7 @@
                             <constraint firstItem="pCP-p6-giO" firstAttribute="leading" secondItem="vpl-Mb-4eX" secondAttribute="trailing" constant="20" id="Sbz-XH-6lE"/>
                             <constraint firstItem="K1K-eK-fJs" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="15" id="fCD-YH-YpY"/>
                             <constraint firstItem="xxb-Pn-CpY" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="85" id="hDq-aw-7ma"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="8lA-Rq-aDO" secondAttribute="trailing" constant="15" id="hRF-TK-1EM"/>
                             <constraint firstItem="G3N-i2-Jcp" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="10" id="jFd-r1-zBx"/>
                             <constraint firstItem="vpl-Mb-4eX" firstAttribute="leading" secondItem="FO2-F4-Bwh" secondAttribute="trailing" constant="20" id="n3Z-aD-pac"/>
                             <constraint firstItem="FO2-F4-Bwh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="qgZ-pY-lLZ"/>
@@ -275,6 +289,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="conditionLabel" destination="8lA-Rq-aDO" id="GIP-9M-pk7"/>
                         <outlet property="emailButton" destination="0G3-1J-n9t" id="Ibe-sp-jRq"/>
                         <outlet property="submitButton" destination="Ebf-UL-RjB" id="ftj-wC-74P"/>
                         <outlet property="timeText" destination="G3N-i2-Jcp" id="s5d-cj-37B"/>
