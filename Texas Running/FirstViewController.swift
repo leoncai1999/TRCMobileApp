@@ -16,7 +16,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var timeText: UILabel!
     @IBOutlet weak var emailButton: UIButton!
-    @IBOutlet weak var conditionLabel: UILabel!
     
     @IBOutlet weak var southButton: checkBox!
     @IBOutlet weak var northButton: checkBox!
@@ -24,8 +23,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var shoalButton: checkBox!
     
     var routeSelected = "None"
-    // indexes: 0 South, 1 North, 2 West, 3 Shoal 
+    // indexes: 0 South, 1 North, 2 West, 3 Shoal
     var routePollCounts = ["South" : "0", "North" : "0", "West" : "0", "Shoal" : "0"]
+    let routes = ["South", "North", "West", "Shoal"]
     
     // references to firebase database
     
@@ -39,6 +39,7 @@ class FirstViewController: UIViewController {
     let shoalRef = Database.database().reference().child("Shoal")
     
     var closeTime = "6:00 PM"
+    var closeHour = 18 // 6 PM
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,20 +52,21 @@ class FirstViewController: UIViewController {
         emailButton.layer.cornerRadius = 5
         emailButton.clipsToBounds = true
         
+        //closePoll()
+        
         // check for daylight savings
         let date = Date()
         let timeZone = TimeZone.current
         if !timeZone.isDaylightSavingTime(for: date) {
-            closeTime = "5:15 PM"
+            closeTime = "5:00 PM"
+            closeHour = 17
         }
         adjustTimeText()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        routeRef.observe(.value) { (snap: DataSnapshot) in
-            self.conditionLabel.text = (snap.value as AnyObject).description
-        }
+        print ("is this getting called")
         // linking dictionary to database
         southRef.observe(.value) { (snap: DataSnapshot) in
             self.routePollCounts["South"] = (snap.value as AnyObject).description
@@ -77,6 +79,48 @@ class FirstViewController: UIViewController {
         }
         shoalRef.observe(.value) { (snap: DataSnapshot) in
             self.routePollCounts["Shoal"] = (snap.value as AnyObject).description
+        }
+        closePoll()
+    }
+    
+    func closePoll() {
+        let hour = Calendar.current.component(.hour, from: Date())
+        // account for DST
+        let dayOfWeek = getDayOfWeek()
+        print ("currenthour")
+        print (hour)
+        if (((dayOfWeek == 2) || (dayOfWeek == 3) || (dayOfWeek == 4) || (dayOfWeek == 5)) && (hour == 20)) {
+            
+            routeRef.observe(.value) { (snap: DataSnapshot) in
+                let routeChoice : String = (snap.value as? String)!
+                self.timeText.text = "The Poll has closed. The route selected is " + routeChoice
+                // check box of selected route and disable boxes from being checked and unchecked
+                
+                if (routeChoice == "South") {
+                    self.southButton.isChecked = true
+                } else if (routeChoice == "North") {
+                    self.northButton.isChecked = true
+                } else if (routeChoice == "West") {
+                    self.westButton.isChecked = true
+                } else {
+                    self.shoalButton.isChecked = true
+                }
+                self.southButton.isUserInteractionEnabled = false
+                self.northButton.isUserInteractionEnabled = false
+                self.westButton.isUserInteractionEnabled = false
+                self.shoalButton.isUserInteractionEnabled = false
+            }
+            // clear the poll
+            for route in routes {
+                routePollCounts[route] = "0"
+            }
+            print ("when is this getting called")
+            southRef.setValue("0")
+            northRef.setValue("0")
+            westRef.setValue("0")
+            shoalRef.setValue("0")
+            // users are unable to vote between 6-7PM M-TH or 5-6PM during DST
+            submitButton.isHidden = true
         }
     }
     
@@ -127,9 +171,10 @@ class FirstViewController: UIViewController {
     
     @IBAction func submitChoice(_ sender: UIButton) {
         if (routeSelected != "None") {
-            routeRef.setValue(routeSelected)
+            //routeRef.setValue(routeSelected)
             adjustCount(choice: routeSelected)
             determineWinner()
+            routeSelected = "None"
         }
     }
     
@@ -137,11 +182,13 @@ class FirstViewController: UIViewController {
         // increment routes count in database and deselct its box
         let oldCount = Int(routePollCounts[choice]!)
         let newCount = oldCount! + 1
+        routePollCounts[choice] = String(newCount)
         if (choice == "South") {
             southRef.setValue(String(newCount))
             southButton.isChecked = false
         } else if (choice == "North") {
             northRef.setValue(String(newCount))
+            print (routePollCounts["North"])
             northButton.isChecked = false
         } else if (choice == "West") {
             westRef.setValue(String(newCount))
@@ -154,7 +201,24 @@ class FirstViewController: UIViewController {
     
     func determineWinner() {
         // sets routeRef to the route with the most votes
-        
+        // in a tie, the route with the lower index wins
+        var winner = "South"
+        var highestCount = 0
+        for route in routes {
+            let currentCount = Int(routePollCounts[route]!)
+            /*print ("route")
+            print (route)
+            print ("currentCount")
+            print (currentCount)
+            print ("highestCount")
+            print (highestCount)*/
+            if currentCount! > highestCount {
+                highestCount = currentCount!
+                winner = route
+            }
+        }
+        print ("is this getting called")
+        routeRef.setValue(winner)
     }
     
     @IBAction func facebookRedirect(_ sender: UIButton) {
