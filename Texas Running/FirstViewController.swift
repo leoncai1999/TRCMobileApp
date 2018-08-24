@@ -89,7 +89,7 @@ class FirstViewController: UIViewController {
         let dayOfWeek = getDayOfWeek()
         print ("currenthour")
         print (hour)
-        if (((dayOfWeek == 2) || (dayOfWeek == 3) || (dayOfWeek == 4) || (dayOfWeek == 5)) && (hour == 20)) {
+        if (((dayOfWeek == 2) || (dayOfWeek == 3) || (dayOfWeek == 4) || (dayOfWeek == 5)) && (hour == closeHour)) {
             
             routeRef.observe(.value) { (snap: DataSnapshot) in
                 let routeChoice : String = (snap.value as? String)!
@@ -188,7 +188,6 @@ class FirstViewController: UIViewController {
             southButton.isChecked = false
         } else if (choice == "North") {
             northRef.setValue(String(newCount))
-            print (routePollCounts["North"])
             northButton.isChecked = false
         } else if (choice == "West") {
             westRef.setValue(String(newCount))
@@ -206,12 +205,6 @@ class FirstViewController: UIViewController {
         var highestCount = 0
         for route in routes {
             let currentCount = Int(routePollCounts[route]!)
-            /*print ("route")
-            print (route)
-            print ("currentCount")
-            print (currentCount)
-            print ("highestCount")
-            print (highestCount)*/
             if currentCount! > highestCount {
                 highestCount = currentCount!
                 winner = route
@@ -240,9 +233,9 @@ class FirstViewController: UIViewController {
         let hour = Calendar.current.component(.hour, from: Date())
         // also need to account for DST here
         let dayOfWeek = getDayOfWeek()
-        if (dayOfWeek == 6 || dayOfWeek == 7 || (dayOfWeek == 5 && hour >= 18)) {
+        if (dayOfWeek == 6 || dayOfWeek == 7 || (dayOfWeek == 5 && hour >= closeHour)) {
             timeText.text = "Poll Closes Monday at " + closeTime
-        } else if (hour >= 18 || dayOfWeek == 1) {
+        } else if (hour >= closeHour || dayOfWeek == 1) {
             timeText.text = "Poll Closes Tomorrow at " + closeTime
         } else {
             timeText.text = "Poll Closes Today at " + closeTime

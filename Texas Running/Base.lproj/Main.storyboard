@@ -171,7 +171,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-Pn-CpY">
-                                <rect key="frame" x="330" y="152.5" width="25" height="124"/>
+                                <rect key="frame" x="330" y="149" width="25" height="124"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3V-cC-D8r" customClass="checkBox" customModule="Texas_Running" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -275,8 +275,8 @@
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="xxb-Pn-CpY" secondAttribute="trailing" constant="20" id="Nqn-Gp-9A2"/>
                             <constraint firstItem="iRl-PP-CBE" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="15" id="P9Z-LJ-jh0"/>
                             <constraint firstItem="pCP-p6-giO" firstAttribute="leading" secondItem="vpl-Mb-4eX" secondAttribute="trailing" constant="20" id="Sbz-XH-6lE"/>
+                            <constraint firstItem="xxb-Pn-CpY" firstAttribute="top" secondItem="G3N-i2-Jcp" secondAttribute="bottom" constant="49" id="aJe-9f-7Bg"/>
                             <constraint firstItem="K1K-eK-fJs" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="15" id="fCD-YH-YpY"/>
-                            <constraint firstItem="xxb-Pn-CpY" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="85" id="hDq-aw-7ma"/>
                             <constraint firstItem="G3N-i2-Jcp" firstAttribute="top" secondItem="iRl-PP-CBE" secondAttribute="bottom" constant="10" id="jFd-r1-zBx"/>
                             <constraint firstItem="vpl-Mb-4eX" firstAttribute="leading" secondItem="FO2-F4-Bwh" secondAttribute="trailing" constant="20" id="n3Z-aD-pac"/>
                             <constraint firstItem="FO2-F4-Bwh" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="15" id="qgZ-pY-lLZ"/>
