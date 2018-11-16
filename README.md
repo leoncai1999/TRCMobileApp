@@ -19,3 +19,9 @@ keys.TwitterSecret with your own keys.
 API Key and in NewsFeedController.Swift, replace keys.StravaKey with your own key. 
 3) Create a Firebase Database for your project via the Google Play Developer Console. This
 will be used to store polling data for the routes in real time
+
+Screenshots:
+![Poll](https://drive.google.com/file/d/1Mgy9r9oq2XC9mTcO8NobiWGKugHL7Aan/)
+![Routes](https://drive.google.com/file/d/1Z_XPYyVrth0l0tWw0eXORCRIgiM_jkxn/)
+![Member Activities](https://drive.google.com/file/d/1ApqtF3admpLHpiqTtaSFHTVmLG5Ecb-y/)
+![News Feed](https://drive.google.com/file/d/1havdweXoWrW1uobrWuwebA0vgzmqQ_RY/)
