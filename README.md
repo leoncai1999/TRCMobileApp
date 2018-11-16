@@ -21,7 +21,7 @@ API Key and in NewsFeedController.Swift, replace keys.StravaKey with your own ke
 will be used to store polling data for the routes in real time
 
 Screenshots:
-![Poll](https://drive.google.com/file/d/1Mgy9r9oq2XC9mTcO8NobiWGKugHL7Aan/)
+![Poll](https://dochub.com/leoncai/Qr5xnR/trcapppoll-png?dt=NcmQoVovTnMQhawjVwKt)
 ![Routes](https://drive.google.com/file/d/1Z_XPYyVrth0l0tWw0eXORCRIgiM_jkxn/)
 ![Member Activities](https://drive.google.com/file/d/1ApqtF3admpLHpiqTtaSFHTVmLG5Ecb-y/)
 ![News Feed](https://drive.google.com/file/d/1havdweXoWrW1uobrWuwebA0vgzmqQ_RY/)
